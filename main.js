@@ -100,3 +100,16 @@ window.addEventListener("mousemove", (e) => {
         gsap.to(sphere.material.color, {r: newColor.r, g: newColor.g, b: newColor.b})
 }
 })
+
+//touch animation
+window.addEventListener("touchstart", (e) => {
+    rgb = [
+        Math.round((e.touches[0].pageX / window.innerWidth) * 255), 
+        Math.round((e.touches[0].pageY / window.innerHeight) * 255), 
+        150,
+    ]
+    console.log(rgb);
+
+    let newColor = new THREE.Color(`rgb(${rgb.join(",")})`)
+    gsap.to(sphere.material.color, {r: newColor.r, g: newColor.g, b: newColor.b})
+})
