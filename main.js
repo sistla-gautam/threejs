@@ -102,7 +102,7 @@ window.addEventListener("mousemove", (e) => {
 })
 
 //touch animation
-window.addEventListener("touchstart", (e) => {
+window.addEventListener("touchmove", (e) => {
     rgb = [
         Math.round((e.touches[0].pageX / window.innerWidth) * 255), 
         Math.round((e.touches[0].pageY / window.innerHeight) * 255), 
